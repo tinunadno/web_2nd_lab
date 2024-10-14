@@ -12,18 +12,13 @@ import java.io.PrintWriter;
 @WebServlet(name="AreaCheckServlet",value="/AreaCheckServlet")
 public class AreaCheckServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        StringBuilder sb = new StringBuilder();
-        BufferedReader reader = request.getReader();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            sb.append(line).append("\n");
-        }
+        String xValue = request.getParameter("xValue");
+        String yValue = request.getParameter("yValue");
+        String radius = request.getParameter("radius");
 
-        // Parse the request body
-        String[] lines = sb.toString().split("\n");
-        double x = Double.parseDouble(lines[0].split(":")[1]);
-        double y = Double.parseDouble(lines[1].split(":")[1]);
-        double r = Double.parseDouble(lines[2].split(":")[1]);
+        double x=Double.parseDouble(xValue);
+        double y=Double.parseDouble(yValue);
+        double r=Double.parseDouble(radius);
 
         // Check if the point is within the circle
         boolean isInside = (x * x + y * y) <= (r * r);
