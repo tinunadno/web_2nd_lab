@@ -10,3 +10,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.result-text-positive{
+    color: black;
+}
+
+.result-text-negative{
+    color: red;
+}

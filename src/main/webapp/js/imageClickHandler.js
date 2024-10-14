@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const interactiveImage = document.getElementById('interactive-image');
+    const point = document.getElementById('point');
+    const pointWidth = 4; // width of the point
+    const pointHeight = 4; // height of the point
 
     // Add click event listener
     interactiveImage.addEventListener('click', function(event) {
@@ -7,14 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const rect = interactiveImage.getBoundingClientRect();
 
         // Calculate click position relative to the image
-        const x = (event.clientX - rect.left) / rect.width;  // X position from 0 to 1
-        const y = (event.clientY - rect.top) / rect.height;  // Y position from 0 to 1
+        const x = (event.clientX - rect.left);  // X position in pixels
+        const y = (event.clientY - rect.top);   // Y position in pixels
 
         // Log the position
         console.log('Click position:', { x, y });
 
-        // Optionally, display the coordinates in the coordinates div
-        //const coordinatesDiv = document.getElementById('coordinates');
-        //coordinatesDiv.innerHTML = `Coordinates: (${x.toFixed(2)}, ${y.toFixed(2)})`;
+        // Set the point's position considering its dimensions
+        point.style.left = `${x-80}px`;
+        point.style.top = `${y-80}px`;
+
+        handleInput((x/rect.width-0.5)*10, (y/rect.height-0.5)*(-10))
     });
 });

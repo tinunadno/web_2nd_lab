@@ -28,6 +28,8 @@ public class AreaCheckServlet extends HttpServlet {
         double x = Double.parseDouble(xValue);
         double y = Double.parseDouble(yValue);
         double r = Double.parseDouble(radius);
+        x = (double)((int)(x * 10000)) / 10000d;
+        y = (double)((int)(y * 10000)) / 10000d;
 
         // Check if the point is within the circle
         boolean isInside = (x * x + y * y) <= (r * r);
@@ -37,11 +39,10 @@ public class AreaCheckServlet extends HttpServlet {
 
         long executionEndTime = System.nanoTime();
 
-        String tableJSP = tableCreator.getTable(xValue, yValue, radius,
+        String tableJSP = tableCreator.getTable(x+"", y+"", radius,
                 (executionEndTime - executionStartTime), isInside);
         String imageJSP = imageScaleCalculator.getImageJSP(r);
-        //<div class="grid-item" id="result"></div>
-        String areaCheckResult = "<div class=\"grid-item\" id=\"result\">" + (isInside ? "point inside function"
+        String areaCheckResult = "<div class=\"grid-item"+(isInside ? " result-text-positive" : " result-text-negative")+"\" id=\"result\">" + (isInside ? "point inside function"
                 : "point outside function") + "</div>";
 
         JSONObject jsonResponse = new JSONObject();

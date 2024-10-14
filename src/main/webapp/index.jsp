@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/tableStyle.css"> <!-- Подключение CSS файла -->
     <link rel="stylesheet" href="css/buttonStyle.css"> <!-- Подключение CSS файла -->
     <link rel="stylesheet" href="css/RadioButtonStyle.css"> <!-- Подключение CSS файла -->
+    <script src="js/inputHandler.js"></script>
     <script src="js/eventHandler.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/requestHandler.js"></script>
@@ -63,7 +64,7 @@
                             <label for="choice5">3</label>
                         </div>
                         <button class="grid-item button" type="button" id = "responseButton">get server response</button>
-                        <div class="grid-item" id="result"></div>
+                        <div class="grid-item result-text-positive" id="result"></div>
                     </div>
                 </div>
             </form>
@@ -91,11 +92,11 @@
         </div>
         <div class="graphicSpot">
             <div class="graphic">
-                <div class="graphicPlotContainer" style="--scale: 0.5;" id="graphicPlot">
-                    <img src="figure/figure.png" id="figure" style="transform: scale(var(--scale));">
-                    <div id="point" class="point"></div>
-                </div>
                 <img src="figure/graphLines.png" alt="Interactive Image" id="interactive-image">
+                <div id="point" class="point"></div>
+            </div>
+            <div class="graphicPlotContainer" style="--scale: 0.5;" id="graphicPlot">
+                <img src="figure/figure.png" id="figure" style="transform: scale(var(--scale));">
             </div>
         </div>
     </div>
