@@ -9,8 +9,8 @@
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  0.185 s
-[[1;34mINFO[m] Finished at: 2024-10-14T18:11:48+03:00
+[[1;34mINFO[m] Total time:  0.299 s
+[[1;34mINFO[m] Finished at: 2024-10-14T19:41:14+03:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] Scanning for projects...
 [[1;34mINFO[m] 
@@ -24,7 +24,7 @@
 [[1;34mINFO[m] 
 [[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mweb_lab_2[0;1m ---[m
 [[1;34mINFO[m] Changes detected - recompiling the module!
-[[1;34mINFO[m] Compiling 2 source files to /home/yura/Applications/intellij/ideaProjects/web_2nd_lab/target/classes
+[[1;34mINFO[m] Compiling 4 source files to /home/yura/Applications/intellij/ideaProjects/web_2nd_lab/target/classes
 [[1;34mINFO[m] 
 [[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mweb_lab_2[0;1m ---[m
 [[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
@@ -45,6 +45,6 @@
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  2.267 s
-[[1;34mINFO[m] Finished at: 2024-10-14T18:11:52+03:00
+[[1;34mINFO[m] Total time:  2.475 s
+[[1;34mINFO[m] Finished at: 2024-10-14T19:41:18+03:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m

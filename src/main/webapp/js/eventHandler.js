@@ -9,8 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const xValue = formData.get('xValue');
         const yValue = formData.get('yValue');
 
-        //TODO add validating inserted data
+        const warningField=document.getElementById("result");
 
-        sendRequest(xValue, yValue, radiusValue);
+        //TODO add null radioButton validating
+        if(isNaN(parseInt(yValue))){
+
+            warningField.textContent="y must be an Integer";
+            warningField.style.color='red';
+        }else if(parseInt(yValue) < -3 || parseInt(yValue) > 3){
+            warningField.textContent="y must be in [-3; 3]";
+            warningField.style.color='red';
+        }else {
+            sendRequest(xValue, yValue, radiusValue);
+        }
     });
 });
