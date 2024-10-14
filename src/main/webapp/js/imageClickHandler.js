@@ -10,16 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const rect = interactiveImage.getBoundingClientRect();
 
         // Calculate click position relative to the image
-        const x = (event.clientX - rect.left);  // X position in pixels
-        const y = (event.clientY - rect.top);   // Y position in pixels
+        const x = (event.clientX - rect.left-95);  // X position in pixels
+        const y = (event.clientY - rect.top-95);   // Y position in pixels
 
-        // Log the position
-        console.log('Click position:', { x, y });
+
 
         // Set the point's position considering its dimensions
-        point.style.left = `${x-80}px`;
-        point.style.top = `${y-80}px`;
+        point.style.left = `${x+15}px`;
+        point.style.top = `${y+15}px`;
 
-        handleInput((x/rect.width-0.5)*10, (y/rect.height-0.5)*(-10))
+        handleInput((x*10)/560-5, (y*10/560-5)*(-1));
     });
 });

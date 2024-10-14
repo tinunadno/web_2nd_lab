@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.labWeb2.Services.AreaChecker;
 import org.labWeb2.Services.ImageScaleCalculator;
 import org.labWeb2.Services.TableCreator;
 import org.json.JSONObject;
@@ -17,6 +18,7 @@ import java.io.PrintWriter;
 public class AreaCheckServlet extends HttpServlet {
     private static TableCreator tableCreator = new TableCreator();
     private static ImageScaleCalculator imageScaleCalculator = new ImageScaleCalculator();
+    private static AreaChecker areaChecker = new AreaChecker();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long executionStartTime = System.nanoTime();
@@ -32,7 +34,7 @@ public class AreaCheckServlet extends HttpServlet {
         y = (double)((int)(y * 10000)) / 10000d;
 
         // Check if the point is within the circle
-        boolean isInside = (x * x + y * y) <= (r * r);
+        boolean isInside = areaChecker.checkPoint(x, y, r);
 
         // Prepare response
         response.setContentType("text/plain");

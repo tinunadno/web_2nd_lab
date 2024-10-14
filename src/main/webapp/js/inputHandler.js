@@ -6,13 +6,14 @@ function handleInput(xValue, yValue){
     const warningField=document.getElementById("result");
 
     //TODO add null radioButton validating
-    if(isNaN(parseInt(yValue))){
+    if(isNaN(parseFloat(yValue))){
 
         warningField.textContent="y must be an Integer";
         warningField.style.color='red';
-    }else if(parseInt(yValue) < -3 || parseInt(yValue) > 3){
+    }else if(parseFloat(yValue) < -3 || parseFloat(yValue) > 3){
         warningField.textContent="y must be in [-3; 3]";
         warningField.style.color='red';
+
     }else {
         sendRequest(xValue, yValue, radiusValue);
     }
