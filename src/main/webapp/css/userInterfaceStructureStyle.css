@@ -1,0 +1,39 @@
+.middle .userInterfacePanel {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.userInput {
+  flex: 1;
+  background-color: white;
+  border-right: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  overflow-y: auto;
+  overflow-x: auto;
+
+}
+
+.userInputHistory {
+  flex: 1;
+  background-color: white;
+  border-right: 1px solid darkgray;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.graphicSpot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 70%; /* Ширина элемента graphicSpot */
+  position: relative;
+  overflow-y: auto;
+  overflow-x: auto;
+}
