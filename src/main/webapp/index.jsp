@@ -49,19 +49,17 @@
                             <input class="textField" name="yValue" id="user-input-textField" type="text">
                         </div>
                         <div class="grid-item">radius:</div>
-                        <div class="grid-item">
-                            <form id="radioButtonForm">
-                                <input type="radio" name="radius" id="choice1" value="1" />
-                                <label for="choice1">1</label>
-                                <input type="radio" name="radius" id="choice2" value="1.5"/>
-                                <label for="choice2">1.5</label>
-                                <input type="radio" name="radius" id="choice3" value="2"/>
-                                <label for="choice3">2</label>
-                                <input type="radio" name="radius" id="choice4" value="2.5"/>
-                                <label for="choice4">2.5</label>
-                                <input type="radio" name="radius" id="choice5" value="3"/>
-                                <label for="choice5">3</label>
-                            </form>
+                        <div class="grid-item" id="radioButtonDiv">
+                            <input type="radio" name="radius" id="choice1" value="1" />
+                            <label for="choice1">1</label>
+                            <input type="radio" name="radius" id="choice2" value="1.5"/>
+                            <label for="choice2">1.5</label>
+                            <input type="radio" name="radius" id="choice3" value="2"/>
+                            <label for="choice3">2</label>
+                            <input type="radio" name="radius" id="choice4" value="2.5"/>
+                            <label for="choice4">2.5</label>
+                            <input type="radio" name="radius" id="choice5" value="3"/>
+                            <label for="choice5">3</label>
                         </div>
                         <button class="grid-item button" type="button" id = "responseButton">get server response</button>
                         <div class="grid-item" id="result"></div>
@@ -82,7 +80,9 @@
                         <th class="tableHeader">response</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="tableBody">
+
+                    </tbody>
 
                 </table>
 
@@ -130,6 +130,6 @@
         </div>
     </div>
 </div>
-<footer class="footer">v 1.05</footer>
+<footer class="footer">v 1.78</footer>
 </body>
 </html>
