@@ -21,9 +21,10 @@
     <script src="js/eventHandler.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/requestHandler.js"></script>
+    <script src="js/imageClickHandler.js"></script>
 </head>
 <body class="body">
-<header class="header">Перминов Юра Константинович P3231 Вариант №664</header>
+<header class="header">Перминов Юра Константинович P3231 Вариант №223317</header>
 <div class="middle">
     <div class="userInterfacePanel">
         <div class="left">
@@ -56,7 +57,7 @@
                             <label for="choice2">1.5</label>
                             <input type="radio" name="radius" id="choice3" value="2"/>
                             <label for="choice3">2</label>
-                            <input type="radio" name="radius" id="choice4" value="2.5"/>
+                            <input type="radio" name="radius" id="choice4" value="2.5"/ checked>
                             <label for="choice4">2.5</label>
                             <input type="radio" name="radius" id="choice5" value="3"/>
                             <label for="choice5">3</label>
@@ -90,42 +91,11 @@
         </div>
         <div class="graphicSpot">
             <div class="graphic">
-                <div class="axis-x"></div>
-                <div class="axis-y"></div>
-                <div class="label-x">x</div>
-                <div class="label-y">y</div>
-                <div class="graphicPlotContainer">
-                    <div class="figure-1"></div>
-                    <div class="figure-2"></div>
-                    <div class="figure-3"></div>
-
-                    <div class="radius-Vertical-Point" style="--x-v-position: 50%; --y-v-position: 0"></div>
-                    <div class="radius-Label" style="--x-label-position: 50%; --y-label-position: 0; --x-displacement: 10px;
-           --y-displacement: -10px">R</div>
-                    <div class="radius-Vertical-Point" style="--x-v-position: 50%; --y-v-position: 100%"></div>
-                    <div class="radius-Label" style="--x-label-position: 50%; --y-label-position: 100%; --x-displacement: 10px;
-           --y-displacement: 10px">-R</div>
-                    <div class="radius-Vertical-Point" style="--x-v-position: 50%; --y-v-position: 25%"></div>
-                    <div class="radius-Label" style="--x-label-position: 50%; --y-label-position: 25%; --x-displacement: 10px;
-           --y-displacement: -10px">R/2</div>
-                    <div class="radius-Vertical-Point" style="--x-v-position: 50%; --y-v-position: 75%"></div>
-                    <div class="radius-Label" style="--x-label-position: 50%; --y-label-position: 75%; --x-displacement: 10px;
-           --y-displacement: 10px">-R/2</div>
-
-                    <div class="radius-Horizontal-Point" style="--x-h-position: 0%; --y-h-position: 50%"></div>
-                    <div class="radius-Label" style="--x-label-position: 0%; --y-label-position: 50%; --x-displacement: 5px;
-           --y-displacement: 5px">-R</div>
-                    <div class="radius-Horizontal-Point" style="--x-h-position: 100%; --y-h-position: 50%"></div>
-                    <div class="radius-Label" style="--x-label-position: 100%; --y-label-position: 50%; --x-displacement: 5px;
-           --y-displacement: 5px">R</div>
-                    <div class="radius-Horizontal-Point" style="--x-h-position: 25%; --y-h-position: 50%"></div>
-                    <div class="radius-Label" style="--x-label-position: 25%; --y-label-position: 50%; --x-displacement: 5px;
-           --y-displacement: 5px">-R/2</div>
-                    <div class="radius-Horizontal-Point" style="--x-h-position: 75%; --y-h-position: 50%"></div>
-                    <div class="radius-Label" style="--x-label-position: 75%; --y-label-position: 50%; --x-displacement: 5px;
-           --y-displacement: 5px">R/2</div>
-                    <div class="point" id="point"></div>
+                <div class="graphicPlotContainer" style="--scale: 0.5;" id="graphicPlot">
+                    <img src="figure/figure.png" id="figure" style="transform: scale(var(--scale));">
+                    <div id="point" class="point"></div>
                 </div>
+                <img src="figure/graphLines.png" alt="Interactive Image" id="interactive-image">
             </div>
         </div>
     </div>

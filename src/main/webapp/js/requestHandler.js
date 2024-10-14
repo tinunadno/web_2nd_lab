@@ -11,13 +11,18 @@ function sendRequest(xValue, yValue, radius) {
             yValue: yValue,
             radius: radius
         },
+        dataType: 'json', // Expect a JSON response
         success: function(response) {
             console.log('Response:', response);
-            //$('#result').html(response); // Insert response into the element with id="result"
-            $('#tableBody').html(response);
+
+            $('#tableBody').html(response.table);
+
+            $('#graphicPlot').html(response.image);
+
+            $('#result').html(response.result);
         },
         error: function(xhr, status, error) {
-            console.error(error);
+            console.error('AJAX Error:', error);
             $('#result').html('<p>Error occurred while processing your request.</p>');
         }
     });

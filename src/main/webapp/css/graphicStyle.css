@@ -1,37 +1,20 @@
-.graphicSpot .graphic{
-  position: relative; /* Устанавливаем контекст для абсолютного позиционирования */
-  width: 600px; /* Ширина на 50% */
-  height: 600px; /* Высота на 50% */
-  margin: 0; /* Убираем отступы */
+.graphicSpot .graphic {
+  position: relative; /* Establishes a positioning context */
+  width: 600px; /* Width of the container */
+  height: 600px; /* Height of the container */
+  margin: 0; /* Remove margins */
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1;
 }
-
-.axis-x {
-  position: relative; /* Меняем на absolute, чтобы позиционировать относительно graphicSpot */
-  height: 2px;
-  width: 100%;
-  bottom: -50%; /* Положение по вертикали внизу */
-  left: 0; /* Центрируем ось X */
-  background-color: black;
+.point{
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: lightcoral;
+  top: calc(50% - 5px);
+  left: calc(50% - 3px);
+  border-radius: 4px;
+  border: 2px solid red; /* Граница ячеек */
 }
-
-.label-x {
-  position: absolute; /* Меняем на absolute, чтобы позиционировать относительно axis-x */
-  left: calc(100% + 20px);
-  bottom: calc(50% + 5px); /* Положение под осью X */
-}
-
-.graphic .axis-y{
-  position: relative; /* Меняем на absolute, чтобы позиционировать относительно graphicSpot */
-  height: 100%;
-  width: 2px;
-  bottom: 0; /* Положение по вертикали внизу */
-  left: 50%; /* Центрируем ось X */
-  background-color: black;
-}
-
-.label-y{
-  position: absolute; /* Меняем на absolute, чтобы позиционировать относительно axis-x */
-  left: calc(50% + 5px);
-  bottom: calc(100% + 20px); /* Положение под осью X */
-}
-
