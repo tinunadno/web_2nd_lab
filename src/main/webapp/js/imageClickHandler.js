@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const x = (event.clientX - rect.left-95);  // X position in pixels
         const y = (event.clientY - rect.top-95);   // Y position in pixels
 
-
-
         // Set the point's position considering its dimensions
         point.style.left = `${x+15}px`;
         point.style.top = `${y+15}px`;

@@ -102,6 +102,6 @@
         </div>
     </div>
 </div>
-<footer class="footer">v 1.78</footer>
+<footer class="footer">v 2.0</footer>
 </body>
 </html>

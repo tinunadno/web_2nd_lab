@@ -9,8 +9,8 @@
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  0.176 s
-[[1;34mINFO[m] Finished at: 2024-10-15T14:39:15+03:00
+[[1;34mINFO[m] Total time:  0.354 s
+[[1;34mINFO[m] Finished at: 2024-10-15T22:39:21+03:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] Scanning for projects...
 [[1;34mINFO[m] 
@@ -42,9 +42,16 @@
 [[1;34mINFO[m] Processing war project
 [[1;34mINFO[m] Copying webapp resources [/home/yura/Applications/intellij/ideaProjects/web_2nd_lab/src/main/webapp]
 [[1;34mINFO[m] Building war: /home/yura/Applications/intellij/ideaProjects/web_2nd_lab/target/labWeb2.war
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mwildfly-maven-plugin:4.0.0.Beta2:package[m [1m(default)[m @ [36mweb_lab_2[0;1m ---[m
+[[1;34mINFO[m] Provisioning server in /home/yura/Applications/intellij/ideaProjects/web_2nd_lab/target/server
+[[1;34mINFO[m] Deploying /home/yura/Applications/intellij/ideaProjects/web_2nd_lab/target/labWeb2.war
+[disconnected /] embed-server --server-config=standalone.xml
+[standalone@embedded /] deploy  /home/yura/Applications/intellij/ideaProjects/web_2nd_lab/target/labWeb2.war --name=labWeb2.war --runtime-name=labWeb2.war
+[standalone@embedded /] stop-embedded-server
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  2.312 s
-[[1;34mINFO[m] Finished at: 2024-10-15T14:39:18+03:00
+[[1;34mINFO[m] Total time:  16.747 s
+[[1;34mINFO[m] Finished at: 2024-10-15T22:39:39+03:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
