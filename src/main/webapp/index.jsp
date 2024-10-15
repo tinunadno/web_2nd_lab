@@ -23,6 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/requestHandler.js"></script>
     <script src="js/imageClickHandler.js"></script>
+    <script src="js/windowEventListener.js"></script>
 </head>
 <body class="body">
 <header class="header">Перминов Юра Константинович P3231 Вариант №223317</header>

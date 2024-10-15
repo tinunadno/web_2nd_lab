@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const xValue = formData.get('xValue');
         const yValue = formData.get('yValue');
 
-
-
         handleInput(xValue, yValue);
     });
 });

@@ -3,12 +3,16 @@
   width: 100%; /* Таблица занимает всю ширину контейнера */
   border-collapse: collapse; /* Убираем промежутки между ячейками */
 }
-.tableHeader{
+.tableHeader {
   border: 1px solid darkgrey; /* Граница ячеек */
   text-align: center; /* Выравнивание текста по центру */
   padding: 10px; /* Отступы внутри ячеек */
-  height: 10px;
+  height: 30px; /* Increased height for better visibility */
   background-color: #dbdbdb;
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 150px; /* Set a fixed width */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 .th{
   border: 1px solid black; /* Граница ячеек */

@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const interactiveImage = document.getElementById('interactive-image');
     const point = document.getElementById('point');
-    const pointWidth = 4; // width of the point
-    const pointHeight = 4; // height of the point
 
     // Add click event listener
     interactiveImage.addEventListener('click', function(event) {
