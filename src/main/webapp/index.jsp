@@ -93,7 +93,7 @@
         </div>
         <div class="graphicSpot">
             <div id="points" class="pointsLayout">
-                <div class="point" style="--x: 375; --y: 375;"></div>
+                <!-- <div class="point" style="--x: 375; --y: 375;"></div> -->
             </div>
             <div class="graphic">
                 <img src="figure/graphLines.png" alt="Interactive Image" id="interactive-image">
