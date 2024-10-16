@@ -92,9 +92,11 @@
             </div>
         </div>
         <div class="graphicSpot">
+            <div id="points" class="pointsLayout">
+                <div class="point" style="--x: 375; --y: 375;"></div>
+            </div>
             <div class="graphic">
                 <img src="figure/graphLines.png" alt="Interactive Image" id="interactive-image">
-                <div id="point" class="point"></div>
             </div>
             <div class="graphicPlotContainer" style="--scale: 0.5;" id="graphicPlot">
                 <img src="figure/figure.png" id="figure" style="transform: scale(var(--scale));">

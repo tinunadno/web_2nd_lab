@@ -1,5 +1,5 @@
 function handleInput(xValue, yValue){
-    const point = document.getElementById('point');
+//    const point = document.getElementById('point');
     const form = document.getElementById('userInputForm');
     const formData = new FormData(form);
 
@@ -17,8 +17,8 @@ function handleInput(xValue, yValue){
         warningField.textContent="y must be in [-3; 3]";
         warningField.style.color='red';
     }else {
-        point.style.left = `${((x+5)*56)+15}px`;
-        point.style.top = `${((y*(-1)+5)*56)+15}px`;
+//        point.style.left = `${((x+5)*56)+15}px`;
+//        point.style.top = `${((y*(-1)+5)*56)+15}px`;
         sendRequest(xValue, yValue, radiusValue);
     }
 }

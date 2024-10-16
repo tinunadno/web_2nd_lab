@@ -18,15 +18,15 @@ $.ajax({
         if (response && typeof response === 'object' && response!="") {
             if (response.table !== null) {
                 $('#tableBody').html(response.table);
-                sessionStorage.setItem("table", response.table);
             }
             if (response.image !== null) {
                 $('#graphicPlot').html(response.image);
-                sessionStorage.setItem("image", response.image);
             }
             if (response.result !== null) {
                 $('#result').html(response.result);
-                sessionStorage.setItem("result", response.result);
+            }
+            if (response.points !== null) {
+                $('#points').html(response.points);
             }
         }
 

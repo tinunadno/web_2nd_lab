@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.labWeb2.Services.AreaChecker;
 import org.labWeb2.Services.ImageScaleCalculator;
+import org.labWeb2.Services.PointJSPCreator;
 import org.labWeb2.Services.ResponseCreator;
 import org.json.JSONObject;
 
@@ -19,6 +20,7 @@ public class AreaCheckServlet extends HttpServlet {
     private static ResponseCreator responseCreator = new ResponseCreator();
     private static ImageScaleCalculator imageScaleCalculator = new ImageScaleCalculator();
     private static AreaChecker areaChecker = new AreaChecker();
+    private static PointJSPCreator pointJSPCreator=new PointJSPCreator();
 
     private String lastResponse = "";
 
@@ -66,12 +68,14 @@ public class AreaCheckServlet extends HttpServlet {
         String imageJSP = imageScaleCalculator.getImageJSP(r);
         String areaCheckResult = "<div class=\"grid-item" + (isInside ? " result-text-positive" : " result-text-negative") + "\" id=\"result\">" + (isInside ? "point inside function"
                 : "point outside function") + "</div>";
+        String pointStory= pointJSPCreator.createJSPPoint(x, y);
 
         JSONObject jsonResponse = new JSONObject();
 
         jsonResponse.put("table", tableJSP);
         jsonResponse.put("image", imageJSP);
         jsonResponse.put("result", areaCheckResult);
+        jsonResponse.put("points", pointStory);
         out.print(jsonResponse.toString());
         lastResponse = jsonResponse.toString();
         out.flush();
