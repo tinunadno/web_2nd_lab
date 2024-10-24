@@ -54,7 +54,7 @@
                         </div>
                         <div class="grid-item">radius:</div>
                         <div class="grid-item" id="radioButtonDiv">
-                            <input type ="radio" name="radius" id="choice1" value="1" />
+                            <input type="radio" name="radius" id="choice1" value="1" />
                             <label for="choice1">1</label>
                             <input type="radio" name="radius" id="choice2" value="1.5"/>
                             <label for="choice2">1.5</label>
@@ -99,8 +99,8 @@
             <div class="graphic">
                 <img src="figure/graphLines.png" alt="Interactive Image" id="interactive-image">
             </div>
-            <div class="graphicPlotContainer" style="--scale: 1;" id="graphicPlot">
-                <canvas class="canvas" id="batmanCanvas" style="transform: scale(var(--scale));"  data-custom="2.5" width="500" height="400"></canvas>
+            <div class="graphicPlotContainer" style="--scale: 0.5;" id="graphicPlot">
+                <canvas id="batmanCanvas" style="transform: scale(var(--scale));"></canvas>
             </div>
         </div>
     </div>

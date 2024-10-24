@@ -12,6 +12,7 @@
 }
 
 .graphicPlotContainer img {
+  position: relative;
   max-width: none; /* Prevent scaling down for the second image */
   max-height: none; /* Prevent scaling down for the second image */
   transform: scale(var(--scale)); /* Apply scaling based on custom property */

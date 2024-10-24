@@ -16,13 +16,11 @@ $.ajax({
         console.log('Response:', response);
             // Check if response is well-formed
         if (response && typeof response === 'object' && response!="") {
-
-
             if (response.table !== null) {
                 $('#tableBody').html(response.table);
             }
-            if(response.image!==null){
-
+            if (response.image !== null) {
+                $('#graphicPlot').html(response.image);
             }
             if (response.result !== null) {
                 $('#result').html(response.result);

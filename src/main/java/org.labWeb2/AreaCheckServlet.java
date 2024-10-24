@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.labWeb2.Services.AreaChecker;
-import org.labWeb2.Services.ImageScaleCalculator;
 import org.labWeb2.Services.PointJSPCreator;
 import org.labWeb2.Services.ResponseCreator;
 import org.json.JSONObject;
@@ -18,31 +17,15 @@ import java.io.PrintWriter;
 @WebServlet(name = "AreaCheckServlet", value = "/AreaCheckServlet")
 public class AreaCheckServlet extends HttpServlet {
     private static ResponseCreator responseCreator = new ResponseCreator();
-    private static ImageScaleCalculator imageScaleCalculator = new ImageScaleCalculator();
     private static AreaChecker areaChecker = new AreaChecker();
     private static PointJSPCreator pointJSPCreator=new PointJSPCreator();
 
-    private String lastResponse = "";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String xValue = request.getParameter("xValue");
         PrintWriter out = response.getWriter();
         if (xValue.equals("EXIT")) {
             responseCreator.clearStory();
-            return;
-        }
-        if (xValue.equals("UPDATE")) {
-            if(lastResponse.equals("")){
-                JSONObject jsonResponse = new JSONObject();
-                jsonResponse.put("table", "<tr></tr>");
-                jsonResponse.put("image", "            <div class=\"graphicPlotContainer\" style=\"--scale: 0.5;\" id=\"graphicPlot\">\n" +
-                        "                <img src=\"figure/figure.png\" id=\"figure\" style=\"transform: scale(var(--scale));\">\n" +
-                        "            </div>");
-                jsonResponse.put("result", "<div></div>");
-                out.print(jsonResponse.toString());
-            }else{
-                out.print(lastResponse);
-            }
             return;
         }
 
@@ -65,7 +48,6 @@ public class AreaCheckServlet extends HttpServlet {
 
         String tableJSP = responseCreator.createResponse(x + "", y + "", radius,
                 (executionEndTime - executionStartTime), isInside);
-        String imageJSP = imageScaleCalculator.getImageJSP(r);
         String areaCheckResult = "<div class=\"grid-item" + (isInside ? " result-text-positive" : " result-text-negative") + "\" id=\"result\">" + (isInside ? "point inside function"
                 : "point outside function") + "</div>";
         String pointStory= pointJSPCreator.createJSPPoint(x, y);
@@ -73,11 +55,9 @@ public class AreaCheckServlet extends HttpServlet {
         JSONObject jsonResponse = new JSONObject();
 
         jsonResponse.put("table", tableJSP);
-        jsonResponse.put("image", imageJSP);
         jsonResponse.put("result", areaCheckResult);
         jsonResponse.put("points", pointStory);
         out.print(jsonResponse.toString());
-        lastResponse = jsonResponse.toString();
         out.flush();
     }
 }
