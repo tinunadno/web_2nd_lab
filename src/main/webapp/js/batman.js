@@ -79,7 +79,7 @@ function drawBatman() {
         }
 
         ctx.closePath();
-        ctx.strokeStyle = 'blue';
+        ctx.strokeStyle = 'rgb(106, 147, 209)';
         ctx.stroke();
     };
 

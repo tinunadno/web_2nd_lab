@@ -34,3 +34,19 @@
   top: calc(var(--y) * 1px);
   left: calc(var(--x) * 1px);
 }
+
+.point_pos {
+  position: absolute;
+  width: 8px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  background-color: lightgreen;
+  border-radius: 50%; /* Make the point circular */
+  border: 2px solid green; /* Border style */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Positioning points based on data attributes */
+.point_pos {
+  top: calc(var(--y) * 1px);
+  left: calc(var(--x) * 1px);
+}

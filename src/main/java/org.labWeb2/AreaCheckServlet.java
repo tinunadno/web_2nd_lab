@@ -50,7 +50,7 @@ public class AreaCheckServlet extends HttpServlet {
                 (executionEndTime - executionStartTime), isInside);
         String areaCheckResult = "<div class=\"grid-item" + (isInside ? " result-text-positive" : " result-text-negative") + "\" id=\"result\">" + (isInside ? "point inside function"
                 : "point outside function") + "</div>";
-        String pointStory= pointJSPCreator.createJSPPoint(x, y);
+        String pointStory= pointJSPCreator.createJSPPoint(x, y, isInside);
 
         JSONObject jsonResponse = new JSONObject();
 
