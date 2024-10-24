@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="css/tableStyle.css"> <!-- Подключение CSS файла -->
     <link rel="stylesheet" href="css/buttonStyle.css"> <!-- Подключение CSS файла -->
     <link rel="stylesheet" href="css/RadioButtonStyle.css"> <!-- Подключение CSS файла -->
-    <script src="js/inputHandler.js"></script>
-    <script src="js/eventHandler.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/requestHandler.js"></script>
+    <script src="js/inputHandler.js"></script>
+    <script src="js/eventHandler.js"></script>
     <script src="js/imageClickHandler.js"></script>
     <script src="js/windowEventListener.js"></script>
     <script src="js/batman.js"></script>

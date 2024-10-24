@@ -43,7 +43,9 @@ function drawBatman() {
         return 9*Math.sqrt(Math.abs((Math.abs(x)-1)*(Math.abs(x)-0.75))/
         ((1-Math.abs(x))*(Math.abs(x)-0.75)))-8*Math.abs(x)-y;
     }
-
+    function f8(x){
+        return 3*Math.abs(x)+0.75*Math.sqrt((Math.abs((Math.abs(x)-0.75)*(Math.abs(x)-0.5))/((0.75 - Math.abs(x))*(Math.abs(x)-0.5))));
+    }
     // Генерация точек
     const drawCurve = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);

@@ -27,15 +27,15 @@ $.ajax({
 
 }
 
-function insertJSON(json){
+function insertJSON(response){
+console.log("ama hera")
     if (response && typeof response === 'object' && response!="") {
-
+        console.log("ama hera1")
 
         if (response.table !== null) {
+            console.log("table")
+            console.log(response.table)
             $('#tableBody').html(response.table);
-        }
-        if(response.image!==null){
-
         }
         if (response.result !== null) {
             $('#result').html(response.result);
