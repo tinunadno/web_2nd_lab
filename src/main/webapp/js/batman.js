@@ -86,4 +86,47 @@ function drawBatman() {
     };
 
     drawCurve();
+    fixBatman();
+}
+
+function fixBatman() {
+    const canvas = document.getElementById('batmanCanvas');
+    const ctx = canvas.getContext('2d');
+    function f2(x, y) {
+        return (Math.abs(x / 2) - (3 * Math.sqrt(33) - 7) / 112 * x ** 2 - 3 +
+            Math.sqrt(1 - (Math.abs(Math.abs(x) - 2) - 1) ** 2) - y);
+    }
+    // Генерация точек
+    const drawCurve = () => {
+        ctx.beginPath();
+        const scale= parseFloat(canvas.getAttribute("data-custom"));
+
+        const step = 0.025;
+
+        let firstPoint = true;
+        let startX, startY;
+
+        for (let x = -10; x <= 10; x += step) {
+            for (let y = -10; y <= 10; y += step) {
+                if (
+                    f2(x, y)>0
+                ) {
+                    const xPosition = (x*7.6*scale+canvas.width/2);
+                    const yPosition = (canvas.height/2 - y*9*scale);
+                    if (firstPoint) {
+                        ctx.moveTo(xPosition, yPosition);
+                        firstPoint = false;
+                    } else {
+                        ctx.lineTo(xPosition, yPosition);
+                    }
+                }
+            }
+        }
+
+        ctx.closePath();
+        ctx.strokeStyle = 'white';
+        ctx.stroke();
+    };
+
+    drawCurve();
 }
